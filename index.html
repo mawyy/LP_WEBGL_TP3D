@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>TP noté WebGL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body onload='main()'>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9 pl-0 pr-0">
+          <canvas id='dawin-webgl'>
+            Utilisez un navigateur compatible avec WebGL.
+          </canvas>
+        </div>
+        <div class="col-md-3 settings-col d-none d-md-block">
+          
+          <h3 class="text-center mt-4 mb-4">- SETTINGS -</h3>
+
+          <h5>Translation</h5>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-2" for="xTranslation">tx</label>
+            <div class="col-sm-10">
+              <input type="range" class="slider" name="xTranslation" value="0" min="-10" max="10" step="0.1" id="xTranslationInput">
+            </div>
+          </div>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-2" for="yTranslation">ty</label>
+            <div class="col-sm-10">
+              <input type="range" class="slider" name="yTranslation" value="0" min="-10" max="10" step="0.1" id="yTranslationInput">
+            </div>
+          </div>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-2" for="zTranslation">tz</label>
+            <div class="col-sm-10">
+              <input type="range" class="slider" name="zTranslation" value="0" min="-10" max="10" step="0.1" id="zTranslationInput">
+            </div>
+          </div>
+
+          <h5>Rotation</h5>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-2" for="xRotation">rx</label>
+            <div class="col-sm-10">
+              <input type="range" class="slider" name="xRotation" value="0" min="-3.14" max="3.14" step="0.01" id="xRotationInput">
+            </div>
+          </div>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-2" for="yRotation">ry</label>
+            <div class="col-sm-10">
+              <input type="range" class="slider" name="yRotation" value="0" min="-3.14" max="3.14" step="0.01" id="yRotationInput">
+            </div>
+          </div>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-2" for="zRotation">rz</label>
+            <div class="col-sm-10">
+              <input type="range" class="slider" name="zRotation" value="0" min="-3.14" max="3.14" step="0.01" id="zRotationInput">
+            </div>
+          </div>
+
+          <h5>Camera</h5>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-4" for="scaleFactor">zoom</label>
+            <div class="col-sm-8">
+              <input type="range" class="slider" name="scaleFactor" value="1" min="0.1" max="5" step="0.1" id="scaleFactorInput">
+            </div>
+          </div>
+          <div class="form-group row align-items-center">
+            <label class="col-sm-4" for="yFov">perspective</label>
+            <div class="col-sm-8">
+              <input type="range" class="slider" name="yFov" value="75" min="30" max="120" step="1" id="yFovInput">
+            </div>
+          </div>
+
+          <h5>Color : <span id="currentHexColor">#RAINBOW</span> </h5>
+          <div class="mb-4" id="colorPicker"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src='js/gl-matrix-min.js'></script>
+    <script src='js/iro.min.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+</html>
